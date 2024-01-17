@@ -1,0 +1,71 @@
+@import '../../styles/styles.scss';
+
+.reproduction{
+    // display: flex;
+
+    width: 350px;
+    height: 730px;
+
+    margin-bottom: 30px;
+
+    background: $primary-green;
+
+    &__painting {
+        margin: 20px 20px 0px 20px ;
+    }
+
+    &__description {
+        margin-left: 20px;
+    }
+
+    &__descriptionAuthor {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $light-black;
+        font-size: 18px;
+    }
+
+    &__descriptionName {
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 30px;
+    }
+
+    &__descriptionSize {
+        margin-top: 8px;
+        margin-bottom: 0px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 18px;
+    }
+
+    &__descriptionPrice{
+        margin-top: 30px;
+        margin-bottom: 0px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $alter-green;
+        font-size: 24px;
+    }
+
+    &__addButton{
+        margin-top: 20px;
+
+        padding: 20px 60px;
+        width: 310px;
+        height: 65px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $alter-green;
+        font-size: 20px;
+
+        border: 1px solid #598D66;
+        background: $primary-green;
+    }
+}
