@@ -22,12 +22,14 @@
         font-size: 40px;
         // font-weight: 500;
     }
+
     &__titleButtons {
         display: flex;
         gap: 32px;
 
     }
-    &__titleButton {
+
+    button {
         padding: 10px 20px;
         align-items: flex-start;
 

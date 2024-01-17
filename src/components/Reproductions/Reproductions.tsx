@@ -12,9 +12,9 @@ const Reproductions = () => {
                     <div className='reproductions__header'>
                         <h1 className='reproductions__title'>Репродукции</h1>
                             <div className='reproductions__titleButtons'>
-                                <button className='reproductions__titleButton'>Франция</button>
-                                <button className='reproductions__titleButton'>Германия</button>
-                                <button className='reproductions__titleButton'>Англия</button>
+                                <button>Франция</button>
+                                <button>Германия</button>
+                                <button>Англия</button>
                             </div>
                     </div>
 

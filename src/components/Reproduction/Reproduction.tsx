@@ -2,7 +2,6 @@ import React from 'react';
 import { IReproduction } from '../../config/config';
 import './Reproduction.scss';
 
-
 interface IReproductionProps {
     reproduction: IReproduction;
 }

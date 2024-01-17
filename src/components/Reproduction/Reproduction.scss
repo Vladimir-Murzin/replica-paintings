@@ -1,7 +1,6 @@
 @import '../../styles/styles.scss';
 
 .reproduction{
-    // display: flex;
 
     width: 350px;
     height: 730px;
@@ -67,5 +66,7 @@
 
         border: 1px solid #598D66;
         background: $primary-green;
+
+        cursor: pointer;
     }
 }
