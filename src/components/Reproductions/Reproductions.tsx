@@ -1,6 +1,8 @@
 import React from 'react';
 import './Reproductions.scss';
 import { france } from '../../config/config.tsx';
+import { germany } from '../../config/config.tsx';
+import { england } from '../../config/config.tsx';
 import Content from '../Content/Content.tsx';
 import Reproduction from '../Reproduction/Reproduction.tsx';
 
@@ -20,7 +22,7 @@ const Reproductions = () => {
 
                     <div className='reproductions__cards'>
                         {
-                            france.map(el => {
+                            germany.map(el => {
                                 return (
                                     <Reproduction key={el.name} reproduction={el}/>
                                 )
