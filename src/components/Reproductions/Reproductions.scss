@@ -38,11 +38,11 @@
             background: #D4E8D9;
     
             cursor: pointer;
-    
-            &:active {
-                background: #376B44;
-                color: #F4F6F5;
-            }
+        }
+        
+        .reproductions__activeButton {
+            background: #376B44;
+            color: #F4F6F5;
         }
     }
 }
