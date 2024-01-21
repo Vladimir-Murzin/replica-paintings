@@ -1,0 +1,40 @@
+@import '../../styles/styles.scss';
+
+.our-team {
+    display: flex;
+
+    margin: 50px 0 70px 0;
+
+    h1 {
+        margin-top: 35px; 
+        margin-bottom: 0px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    p {
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    &__description{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-left: 30px;
+    }
+
+    &__photo {
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+    }
+}
