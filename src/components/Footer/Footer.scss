@@ -1,8 +1,77 @@
 @import '../../styles/styles.scss';
 
 .footer {
-    height: 168px;
     width: 100%;
 
     background: $primary-green;
+
+    &__description {
+        display: flex;
+
+        padding-top: 23px;
+        padding-bottom: 23px;
+
+        & > div:first-child h6 {
+            margin-top: 35px;
+        }
+
+        & > div:first-child p {
+            margin-top: 12px;
+        }
+
+        h6 {
+            margin: 0;
+
+            font-family: 'Raleway-Regular', sans-serif;
+            color: $primary-black;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        p {
+            font-family: 'Raleway-Regular', sans-serif;
+            color: $light-black;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+
+            margin: 0px;
+        }
+
+        span {
+            font-family: 'Raleway-Regular', sans-serif;
+            color: $light-black;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        margin-left: 115px;
+
+        gap: 40px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        margin-left: 248px;
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    &__social-media-icons {
+        display: flex;
+        gap: 30px;
+    }
 }
