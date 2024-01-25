@@ -1,0 +1,61 @@
+@import '../../styles/styles.scss';
+
+.cart-item {
+
+    margin: 20px 0;
+
+    &__description {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1.5fr 200px;
+        align-items: center;
+
+        padding: 20px 25px ;
+    
+        background: $primary-green;
+        border-radius: 20px;
+    
+        & > div:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            margin-left: auto;
+            width: 35px;
+            padding: 0px;
+
+            background: $primary-green;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__info {
+        width: 243px;
+        
+        & > span:first-child {
+            font-family: 'Raleway-Regular', sans-serif;
+            color: $primary-black;
+            font-size: 25px;
+        }
+
+        & > span:last-child {
+            font-family: 'Raleway-Regular', sans-serif;
+            color: $primary-black;
+            font-size: 18px;
+        }
+    }
+
+    &__description-name {
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 30px;
+    }
+
+    &__description-price {
+        text-align: right;
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 24px;
+    }
+}

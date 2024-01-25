@@ -13,6 +13,6 @@ const HomePage: React.FC = () => {
             <TeamDescription />
         </>
     )
-}
+};
 
 export default HomePage;
