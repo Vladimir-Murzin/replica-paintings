@@ -3,10 +3,13 @@ import './CartPage.scss';
 import { france, germany } from '../../config/config.tsx';
 import Content from '../../components/Content/Content.tsx';
 import CartItem from '../../components/CartItem/CartItem.tsx';
+import { useAppSelector } from '../../store/store.ts';
 
-const paintings = [france[0], france[1], germany[2]];
+// const paintings = [france[0], france[1], germany[2]];
 
 const CartPage: React.FC = () => {
+    const paintings = useAppSelector((state) => state.cart.cartItems);
+
     return (
         <Content>
             <div className='cart-page'>
