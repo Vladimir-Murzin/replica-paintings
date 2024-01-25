@@ -7,7 +7,9 @@ interface IContentProps {
 
 const Content: React.FC<IContentProps> = ({ children }) => {
     return(
-        <div className='content-width'>{children}</div>
+        <div className='content-width'>
+            {children}
+        </div>
     )
 }
 

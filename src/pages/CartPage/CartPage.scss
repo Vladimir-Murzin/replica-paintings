@@ -11,20 +11,26 @@
     }
 
     &__buy {
-        display: flex;
-        justify-content: flex-end;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1.5fr 200px;
+
         align-items: center;
 
         margin: 15px 0 25px 0;
 
         span {
-            margin-right: 40px;
+            grid-column: 3 / 4;
+            margin-left: auto;
+
+            margin-right: 25px;
             font-family: 'Raleway-Regular', sans-serif;
             color: $alter-green;
             font-size: 24px; 
         }
 
         button {
+            grid-column: 4 / 5;
+
             padding: 10px 20px;
             width: 200px;
             height: 60px;
