@@ -17,9 +17,14 @@ export const cartSlice = createSlice({
     reducers: {
         addToCart: (state, action: PayloadAction<IReproduction> ) => {
             state.cartItems.push(action.payload)
+            // const existingItem = state.cartItems.find((item) => item.id === action.payload.id);
+
+            // if (!existingItem) {
+            //     state.cartItems.push(action.payload);
+            // }
         },
         deleteFromCart: (state, action: PayloadAction<IReproduction>) => {
-            state.cartItems.filter(el => el !== action.payload)
+            state.cartItems = state.cartItems.filter(el => el.id !== action.payload.id);
         },
     }
 });

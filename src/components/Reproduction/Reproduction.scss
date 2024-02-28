@@ -1,63 +1,115 @@
 @import '../../styles/styles.scss';
 
-.reproduction{
+.reproduction {
     width: 350px;
     height: 730px;
+    padding: 20px 20px 30px;
+    box-sizing: border-box;
+
+    @media (max-width: $TopLaptop) {
+        width: 330px;
+    }
+
+    @media (max-width: $TopTablet) {
+        width: 240px;
+        height: 514px;
+    }
+
+    @media (max-width: $TopMobile) {
+        width: 290px;
+    }
 
     margin-bottom: 30px;
 
     background: $primary-green;
 
     &__painting {
-        margin: 20px 20px 0px 20px ;
+        @media (max-width: $TopLaptop) {
+            width: 290px;
+            height: 422px;
+        }
+
+        @media (max-width: $TopTablet) {
+            width: 200px;
+            height: 250px;
+        }
+
+        @media (max-width: $TopMobile) {
+            width: 250px;
+        }
     }
 
     &__description {
-        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 254px;;
+        justify-content: space-between;
+
+        @media (max-width: $TopTablet) {
+            height: 210px;
+        }
     }
 
-    &__descriptionAuthor {
+    &__description-author {
         margin-top: 20px;
         margin-bottom: 10px;
 
         font-family: 'Raleway-Regular', sans-serif;
         color: $light-black;
         font-size: 18px;
+
+        @media (max-width: $TopTablet) {
+            margin-top: 15px;
+
+            font-size: 16px;
+        }
     }
 
-    &__descriptionName {
+    &__description-name {
         margin-top: 0px;
         margin-bottom: 0px;
 
         font-family: 'Raleway-Regular', sans-serif;
         color: $primary-black;
         font-size: 30px;
+
+        @media (max-width: $TopTablet) {
+            font-size: 24px;
+        }
     }
 
-    &__descriptionSize {
+    &__description-size {
         margin-top: 8px;
         margin-bottom: 0px;
 
         font-family: 'Raleway-Regular', sans-serif;
         color: $primary-black;
         font-size: 18px;
+
+        @media (max-width: $TopTablet) {
+            margin-top: 10px;
+
+            font-size: 16px;
+        }
     }
 
-    &__descriptionPrice{
-        margin-top: 30px;
-        margin-bottom: 0px;
+    &__description-price {
+        margin-top: 0;
+        margin-bottom: 0;
 
         font-family: 'Raleway-Regular', sans-serif;
         color: $alter-green;
         font-size: 24px;
+
+        @media (max-width: $TopTablet) {
+            font-size: 20px;
+        }
     }
 
-    &__addButton{
+    &__add-button {
         margin-top: 20px;
-
-        padding: 20px 60px;
-        width: 310px;
-        height: 65px;
+        padding: 21px 20px;
+        width: 100%;
 
         font-family: 'Raleway-Regular', sans-serif;
         color: $alter-green;
@@ -67,5 +119,40 @@
         background: $primary-green;
 
         cursor: pointer;
+
+        @media (max-width: $TopTablet) {
+            margin-top: 10px;
+            padding: 14px 20px;
+            
+            font-size: 18px;
+        }
     }
+
+    &__added-to-cart-button {
+        margin-top: 20px;
+
+        padding: 21px 20px;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: #F4F6F5;
+        font-size: 20px;
+
+        border: 1px solid #598D66;
+        background: #376B44;
+
+        cursor: pointer;
+
+        @media (max-width: $TopTablet) {
+            margin-top: 10px;
+            padding: 14px 8px;
+            
+            font-size: 18px;
+        }
+
+        @media (max-width: $TopMobile) {
+            padding: 14px 20px;
+        }
+    }
+
+
 }

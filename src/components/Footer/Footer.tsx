@@ -11,12 +11,20 @@ const Footer: React.FC = () => {
         <div className='footer'>
             <Content>
                 <div className='footer__description'>
-                    <div>
+                    <div className='footer__contact-info'>
                         <FrameIcon />
-                        <h6>+7 (999) 543-54-54</h6>
-                        <p>Мастерская</p>
+                        <div>
+                            <h6>+7 (999) 543-54-54</h6>
+                            <p>Мастерская</p>
+                        </div>
                     </div>
                     <div className='footer__menu'>
+                        <div className='footer__contact-info-mobile'>
+                            <div>
+                                <h6>+7 (999) 543-54-54</h6>
+                                <p>Мастерская</p>
+                            </div>
+                        </div>
                         <div>
                             <h6>Репродукции</h6>
                             <p>Франция</p>

@@ -11,14 +11,6 @@
         padding-top: 23px;
         padding-bottom: 23px;
 
-        & > div:first-child h6 {
-            margin-top: 35px;
-        }
-
-        & > div:first-child p {
-            margin-top: 12px;
-        }
-
         h6 {
             margin: 0;
 
@@ -27,6 +19,10 @@
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
+
+                @media (max-width: $TopMobile) {
+                    font-size: 16px;
+                }
         }
 
         p {
@@ -37,14 +33,54 @@
             font-weight: 500;
 
             margin: 0px;
+
+                @media (max-width: $TopMobile) {
+                    font-size: 16px;
+                }
         }
 
-        span {
-            font-family: 'Raleway-Regular', sans-serif;
-            color: $light-black;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
+        @media (max-width: $TopLaptop) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        @media (max-width: $TopTablet) {
+            justify-content: center;
+        }
+        
+    }
+
+
+    &__contact-info {
+
+        width: 100%;
+
+        div {
+            @media (max-width: $TopMobile) {
+                display: none;
+            }
+        }
+
+        h6 {
+            margin-top: 35px;
+            @media (max-width: $TopLaptop) {
+                margin-top: 0px;
+            }
+        }
+
+        p {
+            margin-top: 12px;
+
+            @media (max-width: $TopLaptop) {
+                text-align: end;
+            }
+        }
+
+        @media (max-width: $TopLaptop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
     }
 
@@ -60,6 +96,35 @@
 
             gap: 12px;
         }
+
+        @media (max-width: $TopLaptop) {
+            margin-left: 0px;
+        }
+
+        @media (max-width: $TopTablet) {
+            gap: 100px;
+            padding-bottom: 15px;
+            
+            width: 100%;
+
+            border-bottom: 1px solid #C3D1C6;
+        }
+
+        @media (max-width: $TopMobile) {
+            display: grid;
+            grid-template-columns: 1fr 104px;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 40px;
+            grid-row-gap: 20px;
+        }
+    }
+
+    &__contact-info-mobile {
+        display: none !important;
+
+            @media (max-width: $TopMobile) {
+                display: inherit !important;
+            }
     }
 
     &__social-media {
@@ -68,10 +133,40 @@
         flex-direction: column;
 
         gap: 6px;
+
+            @media (max-width: $TopTablet) {
+                flex-direction: row;
+                max-width: 176px;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                gap: 0px;
+            }
+
+
+        span {
+            font-family: 'Raleway-Regular', sans-serif;
+            color: $light-black;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+
+            @media (max-width: $TopLaptop) {
+                text-align: end;
+            }
+        }
+
+        @media (max-width: $TopLaptop) {
+            margin-left: 0px;
+        }
     }
 
     &__social-media-icons {
         display: flex;
         gap: 30px;
+
+        @media (max-width: $TopTablet) {
+            margin-bottom: 10px;
+        }
     }
 }

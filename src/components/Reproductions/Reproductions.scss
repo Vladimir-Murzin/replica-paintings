@@ -1,12 +1,18 @@
 @import '../../styles/styles.scss';
 
 .reproductions{
-    width: 100%;
+    margin-bottom: 0px;
 
     &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+        margin-bottom: 30px;
+
+        @media (max-width: $TopTablet) {
+            flex-wrap: wrap;
+        }
     }
 
     &__cards {
@@ -19,11 +25,66 @@
         font-family: 'Raleway-Regular', sans-serif;
         color: $primary-black;
         font-size: 40px;
+            @media (max-width: $TopLaptop) {
+                font-size: 30px;
+            }
+
+            @media (max-width: $TopTablet) {
+                width: 100%;
+
+                font-size: 24px;
+            }
+
+            @media (max-width: $TopMobile) {
+                margin-top: 60px;
+            }
     }
 
-    &__titleButtons {
+    &__select {
+        display: none;
+
+        @media (max-width: $TopMobile) {
+            display: inherit;
+
+            width: 100%;
+
+            & > div {
+                width: 100%;
+
+                border-color: #D4E8D9;
+                box-shadow: none;
+            }
+
+            & > div:hover {
+                border-color: #376B44;
+                cursor: pointer;
+            }
+
+            & div[role=listbox] div {
+                &:hover {
+                    background: #E1EDE6;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    background: #376B44;
+                    color: #FFF;
+                }
+
+                &[aria-selected=true] {
+                    background: #376B44;
+                }
+            }
+        }
+    }
+
+    &__title-buttons {
         display: flex;
         gap: 32px;
+
+        @media (max-width: $TopMobile) {
+            display: none;
+        }
 
         button {
             padding: 10px 20px;
@@ -38,11 +99,19 @@
             background: #D4E8D9;
     
             cursor: pointer;
+
+            @media (max-width: $TopTablet) {
+                font-size: 18px;
+            }
         }
         
-        .reproductions__activeButton {
+        .reproductions__active-button {
             background: #376B44;
             color: #F4F6F5;
+            
+            @media (max-width: $TopTablet) {
+                font-size: 18px;
+            }
         }
     }
 }

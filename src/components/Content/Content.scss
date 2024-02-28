@@ -1,4 +1,18 @@
+@import '../../styles/styles.scss';
+
 .content-width {
     width: 1110px;
     margin: 0 auto;
+
+    @media (max-width: $TopLaptop) {
+        max-width: 690px;
+    }
+
+    @media (max-width: $TopTablet) {
+        max-width: 510px;
+    }
+
+    @media (max-width: $TopMobile) {
+        max-width: 290px;
+    }
 }
