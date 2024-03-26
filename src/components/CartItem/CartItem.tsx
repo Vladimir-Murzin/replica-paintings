@@ -9,11 +9,11 @@ interface ICartItemProps {
     reproduction: IReproduction;
 }
 
-const CartItem: React.FC<ICartItemProps> = ({reproduction}) => {
+const CartItem: React.FC<ICartItemProps> = ({ reproduction }) => {
     const dispatch = useAppDispatch();
 
     const handleDeleteFromCart = () => {
-        dispatch(deleteFromCart(reproduction));
+        dispatch(deleteFromCart(reproduction.id));
     };
 
     return (
@@ -36,11 +36,3 @@ const CartItem: React.FC<ICartItemProps> = ({reproduction}) => {
 };
 
 export default CartItem;
-
-// &__description-name-none {
-//     display: none;
-
-//     @media (max-width: $TopTablet) {
-//         display: inherit;
-//     }
-// }

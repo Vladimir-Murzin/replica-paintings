@@ -1,7 +1,29 @@
 @import '../../styles/styles.scss';
 
-.reproductions{
+.reproductions {
     margin-bottom: 0px;
+
+    &__isLoading {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 100px;
+        margin-bottom: 300px;
+        width: 100%;
+    }
+
+    &__error {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 100px;
+        margin-bottom: 300px;
+        width: 100%;
+
+        font-family: 'Raleway-Regular', sans-serif;
+        color: $primary-black;
+        font-size: 40px;
+    }
 
     &__header {
         display: flex;
@@ -25,19 +47,20 @@
         font-family: 'Raleway-Regular', sans-serif;
         color: $primary-black;
         font-size: 40px;
-            @media (max-width: $TopLaptop) {
-                font-size: 30px;
-            }
+        
+        @media (max-width: $TopLaptop) {
+            font-size: 30px;
+        }
 
-            @media (max-width: $TopTablet) {
-                width: 100%;
+        @media (max-width: $TopTablet) {
+            width: 100%;
 
-                font-size: 24px;
-            }
+            font-size: 24px;
+        }
 
-            @media (max-width: $TopMobile) {
-                margin-top: 60px;
-            }
+        @media (max-width: $TopMobile) {
+            margin-top: 60px;
+        }
     }
 
     &__select {

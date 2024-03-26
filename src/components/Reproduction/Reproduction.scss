@@ -4,7 +4,11 @@
     width: 350px;
     height: 730px;
     padding: 20px 20px 30px;
+    margin-bottom: 30px;
+
     box-sizing: border-box;
+    
+    background: $primary-green;
 
     @media (max-width: $TopLaptop) {
         width: 330px;
@@ -18,10 +22,6 @@
     @media (max-width: $TopMobile) {
         width: 290px;
     }
-
-    margin-bottom: 30px;
-
-    background: $primary-green;
 
     &__painting {
         @media (max-width: $TopLaptop) {
@@ -153,6 +153,4 @@
             padding: 14px 20px;
         }
     }
-
-
 }

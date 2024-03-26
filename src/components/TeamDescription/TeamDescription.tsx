@@ -9,11 +9,14 @@ import Employee3 from '../../images/Employee3.png'
 const TeamDescription: React.FC = () => {
     return(
         <Content>
-            <div className='our-team'>
+            <div className='our-team' id="about">
                 <img src={Group} alt="" />
                 <div className='our-team__description'>
                     <h1>Наша команда</h1>
-                    <p>Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</p>
+                    <p>
+                        Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, 
+                        поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.
+                    </p>
                     <div className='our-team__photo'>
                         <img src={Employee1} alt="EmployeeAvatart"/>
                         <img src={Employee2} alt="EmployeeAvatart"/>

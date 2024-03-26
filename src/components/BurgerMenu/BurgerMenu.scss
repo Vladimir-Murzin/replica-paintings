@@ -24,6 +24,11 @@
 
         z-index: 10;
 
+        a:not(.special-link) {
+            text-decoration: none;
+            color: inherit;
+        }
+
         ul {
             display: flex;
             gap: 50px;

@@ -10,29 +10,6 @@ const mock = new MockAdapter(axiosInstance, { delayResponse: 200 });
 
 mock
     .onGet(new RegExp('/paintings/[A-Za-z]+'))
-    .replyOnce(config => {
-        const country = config.url?.split('/')[2];
-
-        switch (country) {
-            case 'france':
-                return [200, {
-                    paintings: [...france]
-                }];
-            case 'germany':
-                return [200, {
-                    paintings: [...germany]
-                }];
-            case 'england':
-                return [200, {
-                    paintings: [...england]
-                }];
-            default:
-                return [404];
-        }
-    })
-    .onGet(new RegExp('/paintings/[A-Za-z]+'))
-    .networkErrorOnce()
-    .onGet(new RegExp('/paintings/[A-Za-z]+'))
     .reply(config => {
         const country = config.url?.split('/')[2];
 
@@ -52,6 +29,6 @@ mock
             default:
                 return [404];
         }
-    });
+    })
 
 export default axiosInstance;

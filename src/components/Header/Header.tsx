@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Header.scss';
 import { ReactComponent as FrameIcon } from '../../images/Frame.svg';
 import { ReactComponent as ShoppingCartIcon } from '../../images/ShoppingCart.svg';
@@ -8,12 +8,8 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu.tsx';
 import '../../styles/styles.scss';
 
 const Header: React.FC = () => {
-    
     return (
         <header className='header'>
-            {/* <div>
-                <Link to="/"><FrameIcon/></Link>
-            </div> */}
             <Content>
                 <div className='header__content'>
                     <div>
@@ -23,12 +19,12 @@ const Header: React.FC = () => {
                     <BurgerMenu />
                     
                     <div className='header__menu'>
-                        <p>Репродукции</p>
-                        <p>Новинки</p>
-                        <p>О нас</p>
+                        <p><a href="#reproductions">Репродукции</a></p>
+                        <p><a href="#novelties">Новинки</a></p>
+                        <p><a href="#about">О нас</a></p>
                         <Link to="/cart"><ShoppingCartIcon/></Link>
                     </div>
-                    <Link to="/cart"><ShoppingCartIcon className='header__shopping-cart-icon-burger-menu'/></Link>
+                    <Link to="/cart" className='header__shopping-cart-icon-burger-menu'><ShoppingCartIcon /></Link>
                 </div>
             </Content>
         </header>

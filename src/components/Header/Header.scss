@@ -1,6 +1,12 @@
 @import '../../styles/styles.scss';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
     display: flex;
     align-items: center;
 
@@ -56,6 +62,11 @@
         color: $primary-black;
         font-size: 20px;
 
+        a:not(.special-link) {
+            text-decoration: none;
+            color: inherit;
+        }
+
         & > * {
             cursor: pointer;
         }
@@ -65,7 +76,6 @@
         }
 
         @media (max-width: $TopTablet) {
-
             width: 100%;
             justify-content: center;
         }
@@ -78,11 +88,8 @@
     &__shopping-cart-icon-burger-menu {
         display: none;
 
-            @media (max-width: $TopMobile) {
-                display: block;
-            }
+        @media (max-width: $TopMobile) {
+            display: block;
+        }
     }
 }
-
-
-
