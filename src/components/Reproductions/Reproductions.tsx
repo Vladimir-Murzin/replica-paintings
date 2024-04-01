@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Reproductions.scss';
 import Content from '../Content/Content.tsx';
 import Reproduction from '../Reproduction/Reproduction.tsx';
-import Select from 'react-select'
+import Select from 'react-select';
 import { useGetPaintingsByCountryQuery } from '../../store/paintingsApi.ts';
 import { Grid } from 'react-loader-spinner';
 
@@ -12,7 +12,7 @@ const options = [
   { value: 'england', label: 'Англия' }
 ];
 
-const Reproductions = () => {
+const Reproductions = React.forwardRef<HTMLDivElement>((props, ref) => {
   const [country, setCountry] = useState(options[1]);
   const { data, error, isLoading } = useGetPaintingsByCountryQuery(country.value); 
 
@@ -21,11 +21,11 @@ const Reproductions = () => {
   };
 
   return (
-    <div className='reproductions'>
+    <div className='reproductions' id={"reproductions"} ref={ref}>
       <Content>
         <div className='reproductions__content'>
           <div className='reproductions__header'>
-            <h1 className='reproductions__title' id="reproductions">Репродукции</h1>
+            <h1 className='reproductions__title'>Репродукции</h1>
             <div className='reproductions__title-buttons'>
               {options.map(option => (
                 <button
@@ -42,6 +42,7 @@ const Reproductions = () => {
               className='reproductions__select'
               onChange={handleCountryChange}
               placeholder='Выберите страну авторов'
+              defaultValue={options[1]}
             />
           </div>
           <div className='reproductions__cards'>
@@ -68,6 +69,6 @@ const Reproductions = () => {
       </Content>
     </div>
   );
-}
+});
 
 export default Reproductions;

@@ -1,15 +1,15 @@
 import React from 'react';
 import './TeamDescription.scss';
 import Content from '../Content/Content.tsx';
-import Group from '../../images/Group.png'
-import Employee1 from '../../images/Employee1.png'
-import Employee2 from '../../images/Employee2.png'
-import Employee3 from '../../images/Employee3.png'
+import Group from '../../images/Group.png';
+import Employee1 from '../../images/Employee1.png';
+import Employee2 from '../../images/Employee2.png';
+import Employee3 from '../../images/Employee3.png';
 
-const TeamDescription: React.FC = () => {
+const TeamDescription = React.forwardRef<HTMLDivElement>((props, ref) => {
     return(
         <Content>
-            <div className='our-team' id="about">
+            <div className='our-team' id={"about"} ref={ref}>
                 <img src={Group} alt="" />
                 <div className='our-team__description'>
                     <h1>Наша команда</h1>
@@ -26,6 +26,6 @@ const TeamDescription: React.FC = () => {
             </div>
         </Content>
     )
-}
+});
 
 export default TeamDescription;

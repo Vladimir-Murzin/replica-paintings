@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import buttonBurgerMenu from '../../images/buttonBurgerMenu.png';
 import buttonBurgerMenuActive from '../../images/buttonBurgerMenuActive.png';
 
-
 const BurgerMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -33,9 +32,9 @@ const BurgerMenu: React.FC = () => {
                             <img src={buttonBurgerMenuActive} alt="Burger menu"/>
                         </button>
                         <ul>
-                            <li><a href="#reproductions" onClick={closeMenu}>Репродукции</a></li>
-                            <li><a href="#novelties" onClick={closeMenu}>Новинки</a></li>
-                            <li><a href="#about" onClick={closeMenu}>О нас</a></li>
+                            <li><Link to="/#reproductions" onClick={closeMenu}>Репродукции</Link></li>
+                            <li><Link to="/#novelties" onClick={closeMenu}>Новинки</Link></li>
+                            <li><Link to="/#about" onClick={closeMenu}>О нас</Link></li>
                         </ul>
                     </Content>
                 </div>

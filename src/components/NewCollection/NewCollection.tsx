@@ -1,12 +1,12 @@
 import React from 'react';
 import './NewCollection.scss';
 import Content from '../Content/Content.tsx';
-import { ReactComponent as Star2 } from '../../images/Star2.svg'
+import { ReactComponent as Star2 } from '../../images/Star2.svg';
 
-const NewCollection: React.FC = () => {
+const NewCollection = React.forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <Content>
-            <div className='new-collection' id="novelties">
+            <div className='new-collection' id={"novelties"} ref={ref}>
                 <div className='new-collection__header'>
                     <Star2 />
                     <h1>Новая коллекция французских авторов</h1>
@@ -20,6 +20,6 @@ const NewCollection: React.FC = () => {
             </div>
         </Content>
     )
-}
+});
 
 export default NewCollection;
